@@ -1,0 +1,39 @@
+@font-face {
+	font-family: 'Patika';
+	font-weight: 400;
+	src:
+		url('/fonts/patika/Patika-Regular.woff2') format('woff2'),
+		url('/fonts/patika/Patika-Regular.woff') format('woff');
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Patika';
+	font-weight: 500;
+	src:
+		url('/fonts/patika/Patika-Medium.woff2') format('woff2'),
+		url('/fonts/patika/Patika-Medium.woff') format('woff');
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Patika';
+	font-weight: 600;
+	src:
+		url('/fonts/patika/Patika-SemiBold.woff2') format('woff2'),
+		url('/fonts/patika/Patika-SemiBold.woff') format('woff');
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Patika';
+	font-weight: 700;
+	src:
+		url('/fonts/patika/Patika-Bold.woff2') format('woff2'),
+		url('/fonts/patika/Patika-Bold.woff') format('woff');
+	font-style: normal;
+	font-display: swap;
+}

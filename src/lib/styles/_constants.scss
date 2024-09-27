@@ -1,0 +1,160 @@
+$media-l: 1919px;
+$media-m: 1439px;
+$media-s: 1279px;
+$media-xs: 991px;
+$media-xxs: 767px;
+
+$base-num-xl: 84px;
+$base-num-l: 72px;
+$base-num-m: 60px;
+$base-num-s: 56px;
+$base-num-xxs: 48px;
+
+$mar-xl: 24px;
+$mar-l: 20px;
+$mar-m-s-xs: 16px;
+
+$mar-1-xl: 32px;
+$mar-1-l: 24px;
+$mar-1-m-s-xs: 20px;
+$mar-1-xxs: 16px;
+
+$mar-2-xl: 48px;
+$mar-2-l: 40px;
+$mar-2-m: 36px;
+
+$mar-3-xl: 8px;
+$mar-3-l: 4px;
+
+$mar-4-xl: 52px;
+$mar-4-l: 36px;
+$mar-4-m: 28px;
+$mar-4-s: 24px;
+$mar-4-xs: 20px;
+$mar-4-xxs: 8px;
+
+$full-height-xl: 992px;
+$full-height-l: 812px;
+$full-height-m: 632px;
+$full-height-s: 680px;
+$full-height-xs: auto;
+
+$radius-xl: 36px;
+$radius-l: 28px;
+$radius-m-s-xs: 24px;
+$radius-xxs: 20px;
+
+@mixin flex-center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+@mixin flex($align, $justify) {
+	display: flex;
+	align-items: $align;
+	justify-content: $justify;
+}
+
+@mixin absFull {
+	position: absolute;
+	inset: 0;
+}
+
+@mixin liShadow {
+	@include absFull;
+	left: calc(var(--base-indent) * (-1));
+	width: calc(100% + var(--base-indent) * 2);
+	bottom: calc(var(--base-indent) * (-2));
+	border-radius: inherit;
+	opacity: 0.72;
+	background: var(--dark-5);
+	mix-blend-mode: multiply;
+	filter: blur(126px);
+
+	@media screen and (max-width: $media-l) {
+		filter: blur(108px);
+	}
+	@media screen and (max-width: $media-m) {
+		filter: blur(90px);
+	}
+	@media screen and (max-width: $media-s) {
+		filter: blur(84px);
+	}
+	@media screen and (max-width: $media-xxs) {
+		filter: blur(72px);
+	}
+}
+
+@mixin pseudoShadow {
+	@include absFull;
+	content: '';
+	left: calc(var(--base-indent) * (-1));
+	width: calc(100% + var(--base-indent) * 2);
+	top: 0;
+	height: calc(100% + var(--base-indent) * 2);
+	opacity: 0.5;
+	background: rgba(0, 0, 0, 0.6);
+	filter: blur(126px);
+}
+
+@mixin transparentBorder {
+	border: 1px solid rgba(255, 255, 255, 0.15);
+	filter: blur(0.5px);
+	border-radius: inherit;
+}
+
+@mixin bgrBlur {
+	background: linear-gradient(
+		180deg,
+		rgba(255, 255, 255, 0.01) 50%,
+		rgba(255, 255, 255, 0.03) 100%
+	);
+	backdrop-filter: blur(21px);
+}
+
+@mixin font($fz, $lh) {
+	font-size: $fz;
+	line-height: $lh;
+}
+
+@mixin vhSquare($w) {
+	width: $w;
+	height: $w;
+}
+
+@mixin wh($w, $h) {
+	width: $w;
+	height: $h;
+}
+
+@mixin hideScrollbar {
+	&::-webkit-scrollbar {
+		display: none;
+	}
+
+	& {
+		-ms-overflow-style: none;
+		scrollbar-width: none;
+	}
+}
+
+@mixin full-w-xxs {
+	width: calc(100% + 32px);
+	margin-left: -16px;
+	margin-right: -16px;
+	padding: 0 16px;
+}
+
+@mixin marginBottomDecreased {
+	margin-bottom: calc(var(--base-num) * 1.5);
+	@media screen and (max-width: $media-s) {
+		margin-bottom: 56px;
+	}
+	@media screen and (max-width: $media-xs) {
+		margin-bottom: 44px;
+	}
+	@media screen and (max-width: $media-xxs) {
+		margin-bottom: 32px;
+	}
+}

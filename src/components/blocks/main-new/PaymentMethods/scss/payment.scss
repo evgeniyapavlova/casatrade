@@ -1,0 +1,103 @@
+@use '$lib/styles/_constants' as var;
+
+.payment {
+	height: var(--full-height);
+	position: relative;
+	@include var.flex-center;
+	flex-direction: column;
+	@media screen and (max-width: var.$media-s) {
+		height: auto;
+	}
+	&-wrap {
+		margin-top: 32px;
+		@media screen and (max-width: var.$media-s) {
+			margin-top: 0;
+		}
+		&:before {
+			top: calc(var(--base-num) * -2);
+			bottom: calc(var(--base-num) * -2);
+			@media screen and (max-width: var.$media-m) {
+				bottom: calc(var(--base-num) * -1.5);
+			}
+			@media screen and (max-width: var.$media-s) {
+				bottom: -84px;
+				top: -84px;
+			}
+			@media screen and (max-width: var.$media-xs) {
+				bottom: -56px;
+				top: -56px;
+			}
+			@media screen and (max-width: var.$media-xxs) {
+				bottom: -48px;
+				top: -48px;
+			}
+		}
+	}
+
+	h2 {
+		text-align: center;
+		@include var.marginBottomDecreased();
+	}
+	.list {
+		@include var.flex(center, space-between);
+		flex-wrap: wrap;
+		gap: var(--base-indent-4);
+		pointer-events: all;
+		@media screen and (max-width: var.$media-xxs) {
+			width: 874px;
+			padding: 250px 0;
+
+			&-wrap {
+				scroll-snap-type: x mandatory;
+				overflow-x: auto;
+				overflow-y: hidden;
+				margin-top: -250px;
+				margin-bottom: -250px;
+				@include var.full-w-xxs;
+				@include var.hideScrollbar;
+			}
+		}
+
+		li {
+			width: calc((100% / 6) - var(--base-indent-4) * 5 / 6);
+			position: relative;
+			@include var.flex-center;
+			padding: var(--base-indent-1);
+			border-radius: var(--radius);
+
+			@media screen and (max-width: var.$media-xs) {
+				width: calc((100% / 4) - var(--base-indent-4) * 3 / 4);
+			}
+			@media screen and (max-width: var.$media-xxs) {
+				width: 139px;
+				scroll-snap-align: center;
+			}
+
+			img {
+				position: relative;
+				z-index: 1;
+				max-width: 100%;
+			}
+
+			&:before,
+			.bgr {
+				@include var.absFull;
+				z-index: 0;
+				border-radius: inherit;
+			}
+			&:after {
+				@include var.transparentBorder;
+				@include var.absFull;
+				content: '';
+			}
+			.bgr {
+				background: linear-gradient(
+					180deg,
+					rgba(255, 255, 255, 0.01) 50%,
+					rgba(255, 255, 255, 0.03) 100%
+				);
+				z-index: 0;
+			}
+		}
+	}
+}

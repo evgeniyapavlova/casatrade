@@ -1,0 +1,10 @@
+@use '$lib/styles/_constants' as var;
+
+.lang-switcher svg {
+	@media screen and (max-width: var.$media-l) {
+		@include var.vhSquare(24px);
+	}
+	@media screen and (max-width: var.$media-m) {
+		@include var.vhSquare(22px);
+	}
+}

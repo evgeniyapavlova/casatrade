@@ -1,0 +1,60 @@
+@use '$lib/styles/_constants' as var;
+
+$overlayHeight: 250px;
+
+.overlay {
+	@media screen and (max-width: var.$media-xxs) {
+		position: absolute;
+		left: 0;
+		right: 0;
+		height: $overlayHeight;
+		background: transparent;
+		z-index: 1;
+		// border: 2px solid red;
+		// &-top {
+		// 	background-color: rgba(255, 255, 255, 0.2);
+		// }
+		// &-bottom {
+		// 	background-color: rgba(0, 0, 0, 0.2);
+		// }
+
+		&-wrap {
+			position: relative;
+			margin-left: -16px;
+
+			.list {
+				padding: $overlayHeight;
+				display: flex;
+
+				li {
+					scroll-snap-align: center;
+				}
+
+				&-wrap {
+					@include var.full-w-xxs;
+					scroll-snap-type: x mandatory;
+					overflow-x: auto;
+					overflow-y: hidden;
+					margin: calc($overlayHeight * (-1));
+					width: calc(100% + 500px);
+
+					@include var.hideScrollbar;
+				}
+			}
+		}
+	}
+}
+
+.speak-wrap .overlay {
+	&-top {
+		height: 150px;
+	}
+	&-wrap {
+		.list {
+			padding-top: 150px;
+			&-wrap {
+				margin-top: -150px;
+			}
+		}
+	}
+}

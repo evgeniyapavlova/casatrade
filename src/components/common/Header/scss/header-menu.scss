@@ -1,0 +1,31 @@
+@use '$lib/styles/_constants' as var;
+
+.header-menu {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	gap: var(--base-indent);
+	color: var(--font-color-2);
+	font-weight: 500;
+	flex-grow: 1;
+
+	.divider {
+		background-color: var(--dark-4);
+		width: 2px;
+		height: 20px;
+		@media screen and (max-width: var.$media-xxs) {
+			display: none;
+		}
+	}
+
+	@media screen and (max-width: var.$media-s) {
+		.nav-link-text:not(:first-child) {
+			display: none;
+		}
+	}
+	@media screen and (max-width: var.$media-xxs) {
+		.nav-link-text {
+			display: none;
+		}
+	}
+}

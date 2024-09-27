@@ -1,0 +1,165 @@
+@use '$lib/styles/_constants' as var;
+
+.form {
+	text-align: left;
+	max-width: 663px;
+	margin: 0 auto;
+	@include var.flex(stretch, center);
+	gap: var(--base-indent);
+	flex-direction: column;
+
+	@media screen and (max-width: var.$media-l) {
+		max-width: 509px;
+	}
+	@media screen and (max-width: var.$media-m) {
+		max-width: 482px;
+	}
+	@media screen and (max-width: var.$media-s) {
+		max-width: 456px;
+	}
+	@media screen and (max-width: var.$media-xxs) {
+		max-width: 384px;
+	}
+
+	.button {
+		width: 100%;
+	}
+
+	&-terms {
+		font-size: 18px;
+		line-height: 24px;
+		position: relative;
+		display: inline-flex;
+		align-items: center;
+		cursor: pointer;
+		user-select: none;
+
+		a {
+			color: inherit;
+		}
+
+		&:hover {
+			.checkmark {
+				background-color: var(--violet-3);
+			}
+		}
+
+		input {
+			position: absolute;
+			opacity: 0;
+			cursor: pointer;
+
+			&:active {
+				& + .checkmark {
+					background-color: var(--violet-4);
+				}
+			}
+
+			&:focus {
+				& + .checkmark {
+					outline: 2px solid var(--orange-2);
+				}
+			}
+
+			&:checked {
+				& + .checkmark {
+					background-color: var(--violet-4);
+
+					svg {
+						opacity: 1;
+					}
+				}
+			}
+		}
+
+		.checkmark {
+			@include var.flex(center, center);
+			width: 28px;
+			height: 28px;
+			margin-right: 16px;
+			position: relative;
+			transition: background-color 0.3s ease;
+			border-radius: 7px;
+			background: var(--font-color-4);
+
+			svg {
+				opacity: 0;
+				transition: opacity 0.3s ease;
+			}
+		}
+	}
+
+	.text-xs {
+		text-align: center;
+	}
+
+	&-input-labell {
+		display: block;
+		margin-bottom: 12px;
+
+		@media screen and (max-width: var.$media-l) {
+			margin-bottom: 6px;
+		}
+	}
+
+	.error-text {
+		color: #e67892;
+		font-size: 16px;
+		line-height: 22px;
+		margin-top: 4px;
+		position: absolute;
+	}
+
+	.styled-input {
+		width: 100%;
+		padding: 16px 20px;
+		border: none;
+		border-radius: 12px;
+		background-color: var(--font-color-4);
+		font-size: 20px;
+		line-height: 28px;
+		color: var(--font-color-6);
+		transition:
+			outline ease-in-out 0.1s,
+			background-color ease-out 0.2s;
+
+		&:focus,
+		&:focus-visible {
+			outline: 2px solid var(--orange-2);
+		}
+
+		&:hover {
+			background-color: #cbd3e4;
+		}
+
+		&:active {
+			background-color: #bac3d9;
+		}
+	}
+
+	.social-reg-buttons {
+		@include var.flex(stretch, space-between);
+		gap: var(--base-indent);
+
+		.button {
+			height: 60px;
+			@include var.flex(center, center);
+			padding: 0;
+			@media screen and (max-width: var.$media-l) {
+				svg {
+					width: 28px;
+				}
+				height: 52px;
+			}
+			@media screen and (max-width: var.$media-m) {
+				vg {
+					width: 24px;
+				}
+				height: 48px;
+			}
+			@media screen and (max-width: var.$media-s) {
+				height: 44px;
+			}
+		}
+	}
+}
