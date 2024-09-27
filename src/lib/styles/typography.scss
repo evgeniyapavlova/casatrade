@@ -1,0 +1,270 @@
+@use '$lib/styles/_constants' as var;
+
+h1 {
+	color: #fff;
+	font-weight: 700;
+	@include var.font(88px, 96px);
+
+	@media screen and (max-width: var.$media-l) {
+		@include var.font(68px, 80px);
+	}
+
+	@media screen and (max-width: var.$media-m) {
+		@include var.font(64px, 72px);
+	}
+
+	@media screen and (max-width: var.$media-s) {
+		@include var.font(55px, 60px);
+	}
+
+	@media screen and (max-width: var.$media-xs) {
+		@include var.font(52px, 56px);
+	}
+
+	@media screen and (max-width: var.$media-xxs) {
+		@include var.font(28px, 32px);
+	}
+}
+
+h2 {
+	color: var(--font-color-4);
+	font-weight: 600;
+	@include var.font(68px, 80px);
+
+	@media screen and (max-width: var.$media-l) {
+		@include var.font(52px, 64px);
+	}
+
+	@media screen and (max-width: var.$media-m) {
+		@include var.font(48px, 60px);
+	}
+
+	@media screen and (max-width: var.$media-s) {
+		@include var.font(40px, 48px);
+	}
+
+	@media screen and (max-width: var.$media-xs) {
+		@include var.font(36px, 44px);
+	}
+
+	@media screen and (max-width: var.$media-xxs) {
+		@include var.font(24px, 32px);
+	}
+}
+
+.text-xl {
+	color: var(--font-color-5);
+	@include var.font(48px, 60px);
+
+	@media screen and (max-width: var.$media-l) {
+		@include var.font(36px, 44px);
+	}
+	@media screen and (max-width: var.$media-m) {
+		@include var.font(34px, 42px);
+	}
+
+	@media screen and (max-width: var.$media-s) {
+		@include var.font(26px, 38px);
+	}
+
+	@media screen and (max-width: var.$media-xs) {
+		@include var.font(22px, 31px);
+	}
+	@media screen and (max-width: var.$media-xxs) {
+		@include var.font(20px, 28px);
+	}
+}
+
+.text-l {
+	color: var(--font-color-2);
+	@include var.font(24px, 36px);
+
+	@media screen and (max-width: var.$media-l) {
+		@include var.font(20px, 28px);
+	}
+	@media screen and (max-width: var.$media-m) {
+		@include var.font(18px, 24px);
+	}
+
+	@media screen and (max-width: var.$media-s) {
+		@include var.font(17px, 23px);
+	}
+
+	@media screen and (max-width: var.$media-xs) {
+		@include var.font(16px, 22px);
+	}
+	@media screen and (max-width: var.$media-xxs) {
+		@include var.font(15px, 20px);
+	}
+}
+
+.text-m {
+	color: var(--font-color-2);
+	@include var.font(20px, 28px);
+
+	@media screen and (max-width: var.$media-l) {
+		@include var.font(18px, 24px);
+	}
+
+	@media screen and (max-width: var.$media-m) {
+		@include var.font(16px, 22px);
+	}
+
+	@media screen and (max-width: var.$media-xs) {
+		@include var.font(15px, 20px);
+	}
+
+	@media screen and (max-width: var.$media-xxs) {
+		@include var.font(14px, 18px);
+	}
+}
+
+.text-xs {
+	color: var(--font-color-2);
+	@include var.font(15px, 22px);
+	@media screen and (max-width: var.$media-l) {
+		@include var.font(14px, 20px);
+	}
+	@media screen and (max-width: var.$media-xs) {
+		@include var.font(13px, 18px);
+	}
+
+	@media screen and (max-width: var.$media-xxs) {
+		@include var.font(12px, 17px);
+	}
+}
+
+h5 {
+	font-weight: 500;
+	color: var(--font-color-5);
+	@include var.font(28px, 40px);
+	@media screen and (max-width: var.$media-l) {
+		@include var.font(22px, 28px);
+	}
+	@media screen and (max-width: var.$media-m) {
+		@include var.font(20px, 28px);
+	}
+	@media screen and (max-width: var.$media-xs) {
+		@include var.font(18px, 24px);
+	}
+	@media screen and (max-width: var.$media-xxs) {
+		@include var.font(17px, 23px);
+	}
+}
+
+h4 {
+	color: var(--font-color-5);
+	font-weight: 500;
+	@include var.font(36px, 44px);
+	@media screen and (max-width: var.$media-l) {
+		@include var.font(28px, 36px);
+	}
+	@media screen and (max-width: var.$media-m) {
+		@include var.font(24px, 32px);
+	}
+	@media screen and (max-width: var.$media-s) {
+		@include var.font(22px, 30px);
+	}
+	@media screen and (max-width: var.$media-xs) {
+		@include var.font(19px, 24px);
+	}
+	@media screen and (max-width: var.$media-xxs) {
+		@include var.font(18px, 24px);
+	}
+}
+
+h3,
+.h3 {
+	color: var(--font-color-5);
+	font-weight: 400;
+	@include var.font(48px, 60px);
+
+	@media screen and (max-width: var.$media-l) {
+		@include var.font(36px, 44px);
+	}
+	@media screen and (max-width: var.$media-m) {
+		@include var.font(34px, 42px);
+	}
+	@media screen and (max-width: var.$media-s) {
+		@include var.font(26px, 38px);
+	}
+	@media screen and (max-width: var.$media-xs) {
+		@include var.font(22px, 30px);
+	}
+}
+
+.nav-link {
+	padding: 8px 0;
+	line-height: 1;
+	font-size: 20px;
+	transition: color 0.2s ease-in-out;
+	cursor: pointer;
+	border-radius: 8px;
+
+	@media screen and (max-width: var.$media-l) {
+		padding: 4px 0;
+		border-radius: 6px;
+		@include var.font(18px, 24px);
+	}
+
+	@media screen and (max-width: var.$media-m) {
+		padding: 5px 0;
+		@include var.font(16px, 22px);
+	}
+
+	@media screen and (max-width: var.$media-xs) {
+		@include var.font(15px, 20px);
+		padding: 6px 0;
+	}
+
+	@media screen and (max-width: var.$media-xxs) {
+		@include var.font(14px, 18px);
+		padding: 7px 0;
+	}
+
+	&:focus-visible {
+		outline: 2px solid var(--orange-2);
+	}
+
+	&:hover {
+		color: var(--violet-3);
+		svg {
+			stroke: var(--violet-3);
+		}
+	}
+
+	&:active {
+		color: var(--violet-4);
+		svg {
+			stroke: var(--violet-4);
+		}
+	}
+
+	svg {
+		stroke: var(--font-color-2);
+		transition: stroke 0.2s ease-in-out;
+	}
+
+	&.lang-switcher {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}
+
+.form-label {
+	color: var(--font-color-4);
+	@include var.font(18px, 24px);
+	@media screen and (max-width: var.$media-l) {
+		@include var.font(16px, 22px);
+	}
+	@media screen and (max-width: var.$media-m) {
+		@include var.font(15px, 20px);
+	}
+	@media screen and (max-width: var.$media-xs) {
+		@include var.font(14px, 20px);
+	}
+	@media screen and (max-width: var.$media-xxs) {
+		@include var.font(13px, 18px);
+	}
+}

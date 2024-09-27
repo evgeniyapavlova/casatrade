@@ -1,0 +1,48 @@
+.intro-bgr-image {
+	position: absolute;
+
+	&-1 {
+		left: 436px;
+		top: 572px;
+	}
+
+	&-2 {
+		left: 754px;
+		top: 488px;
+	}
+
+	&-3 {
+		left: 1040px;
+		top: 724px;
+	}
+
+	&-4 {
+		left: 1382px;
+		top: 680px;
+	}
+
+	&-5 {
+		left: 1728px;
+		top: 538px;
+	}
+
+	&-6 {
+		left: 2104px;
+		top: 252px;
+	}
+
+	&-7 {
+		left: 2338px;
+		top: 92px;
+	}
+}
+
+.intro-bgr-images-wrap {
+	position: absolute;
+	width: 156vw;
+	height: 78vw;
+	left: 50%;
+	top: 0;
+	transform: translateX(-50%);
+	z-index: 0;
+}

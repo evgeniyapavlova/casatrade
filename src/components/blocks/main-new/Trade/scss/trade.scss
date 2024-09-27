@@ -1,0 +1,124 @@
+@use '$lib/styles/_constants' as var;
+
+.trade {
+	text-align: center;
+	position: relative;
+
+	&-wrap {
+		padding: calc(var(--base-num) * 2) 0;
+		position: relative;
+
+		@media screen and (max-width: var.$media-s) {
+			padding: 0;
+		}
+
+		&::before {
+			top: calc(var(--base-num) * (-2));
+			bottom: calc(var(--base-num) * (-1.5));
+
+			@media screen and (max-width: var.$media-xs) {
+				bottom: -56px;
+				top: -56px;
+			}
+
+			@media screen and (max-width: var.$media-xxs) {
+				bottom: -44px;
+				top: -44px;
+			}
+		}
+	}
+	&-content {
+		position: relative;
+		z-index: 2;
+	}
+	.buttons-wrap {
+		@include var.flex(center, center);
+		gap: var(--base-indent);
+
+		@media screen and (max-width: var.$media-xxs) {
+			flex-direction: column;
+		}
+
+		&-apps {
+			margin-bottom: var(--base-indent-1);
+		}
+		&-mobile-apps {
+			margin-top: var(--base-indent-1);
+			button {
+				cursor: pointer;
+				svg {
+					display: block;
+				}
+				svg * {
+					transition:
+						stroke 0.1s ease-in-out,
+						fill 0.1s ease-in-out;
+				}
+
+				&:hover {
+					--app-btn-stroke-outer: var(--violet-3);
+					--app-btn-stroke: var(--violet-3);
+				}
+
+				&:active {
+					--app-btn-stroke-outer: var(--violet-4);
+					--app-btn-stroke: var(--violet-4);
+				}
+
+				&:focus-visible {
+					outline: 2px solid var(--orange-1);
+					border-radius: 12px;
+				}
+			}
+		}
+		.button {
+			width: 387px;
+			@media screen and (max-width: var.$media-l) {
+				width: 324px;
+			}
+			@media screen and (max-width: var.$media-m) {
+				width: 270px;
+			}
+			@media screen and (max-width: var.$media-s) {
+				width: auto;
+			}
+			@media screen and (max-width: var.$media-xxs) {
+				width: 240px;
+			}
+		}
+	}
+	h2 {
+		margin-bottom: calc(var(--base-num) * 1.5);
+		position: relative;
+		z-index: 1;
+
+		@media screen and (max-width: var.$media-s) {
+			margin-bottom: var(--base-num);
+		}
+
+		@media screen and (max-width: var.$media-xs) {
+			margin-bottom: 44px;
+		}
+
+		@media screen and (max-width: var.$media-xxs) {
+			margin-bottom: 32px;
+		}
+	}
+
+	.buttons-blocks-divider {
+		background: linear-gradient(
+			90deg,
+			rgba(255, 255, 255, 0) 20%,
+			rgba(255, 255, 255, 0.13) 49.7%,
+			rgba(255, 255, 255, 0) 80%
+		);
+		width: 100%;
+		height: 1px;
+	}
+}
+
+@media screen and (max-width: var.$media-xxs) {
+	.content-hidden {
+		display: none;
+	}
+}
