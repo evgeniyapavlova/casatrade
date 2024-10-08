@@ -1,1 +1,0 @@
-import{g as r,r as o}from"./MainPageNew.C5AEX1be.js";import{g as s}from"./ScrollTrigger.D3P8AdK4.js";const i=()=>{s.gsap.from(".assets-bgr-image",{x:500,opacity:0,duration:1,stagger:{each:.3,from:"start"},scrollTrigger:{trigger:".comfort .list",start:"top 0",scrub:.5,endTrigger:".assets",end:"top 0"}})},a=t=>{t&&o(i)};function g(){r(a)}export{g as initAnimations};
