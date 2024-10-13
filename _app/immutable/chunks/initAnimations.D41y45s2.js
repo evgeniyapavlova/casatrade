@@ -1,1 +1,0 @@
-import{r as t,g as r}from"./requestAnimationFrameAnimation.Bbp34pEO.js";const i=()=>{r.from(".assets-bgr-image",{x:500,opacity:0,duration:1,stagger:{each:.3,from:"start"},scrollTrigger:{trigger:".comfort .list",start:"top 0",scrub:.5,endTrigger:".assets",end:"top 0"}})};function s(){t(i)}export{s as initAnimations};

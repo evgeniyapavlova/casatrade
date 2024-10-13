@@ -1,0 +1,1 @@
+import{r as i}from"./requestAnimationFrameAnimation.BYIHtINy.js";import{g as r}from"./ScrollTrigger.D3P8AdK4.js";const s={trigger:".registration",start:"top 70vh",end:"bottom center",scrub:1,ease:"power1.inOut"},n=()=>{r.gsap.utils.toArray(".form-glow-wrap").forEach((t,o)=>{r.gsap.to(t,{y:o===0?"+=450":"-=450",scrollTrigger:s})})};function g(){i(n)}export{g as initAnimations};

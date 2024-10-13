@@ -1,1 +1,0 @@
-import{r as o,g as t}from"./requestAnimationFrameAnimation.Bbp34pEO.js";const e=()=>{t.from(".bonuses-li",{y:200,autoAlpha:0,stagger:{each:.07,from:"edges"},scrollTrigger:{trigger:".bonuses h2",start:"top 85%",end:"top 15%",scrub:.5,ease:"power1.inOut"}})};function s(){o(e)}export{s as initAnimations};

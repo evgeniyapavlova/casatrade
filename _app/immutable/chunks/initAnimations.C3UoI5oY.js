@@ -1,0 +1,1 @@
+import{r as o}from"./requestAnimationFrameAnimation.BYIHtINy.js";import{g as t}from"./ScrollTrigger.D3P8AdK4.js";const r=()=>{t.gsap.from(".bonuses-li",{y:200,autoAlpha:0,stagger:{each:.07,from:"edges"},scrollTrigger:{trigger:".bonuses h2",start:"top 85%",end:"top 15%",scrub:.5,ease:"power1.inOut"}})};function i(){o(r)}export{i as initAnimations};

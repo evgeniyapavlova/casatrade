@@ -1,0 +1,1 @@
+import{g as r,S as a}from"./ScrollTrigger.D3P8AdK4.js";r.gsap.registerPlugin(a.ScrollTrigger);r.gsap.ticker.lagSmoothing(10);r.gsap.defaults({lazy:!0,overwrite:"auto"});a.ScrollTrigger.defaults({fastScrollEnd:!1,preventOverlaps:!0,force3D:!0});function s(i){let e=!1;const t=()=>{e||(e=!0,i()),requestAnimationFrame(t)};requestAnimationFrame(t)}export{s as r};

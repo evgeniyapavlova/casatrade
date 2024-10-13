@@ -1,1 +1,0 @@
-import{r as i,g as e}from"./requestAnimationFrameAnimation.Bbp34pEO.js";const r=()=>{const t=document.querySelector(".enter .list");var o=e.timeline({scrollTrigger:{trigger:t,start:"top bottom",end:"bottom top",scrub:.5,overwrite:"auto"}});o.to(".ios-image-wrap",{y:"-=100"}).to(".ios-image-wrap",{y:"+=150"})};function a(){i(r)}export{a as initAnimations};

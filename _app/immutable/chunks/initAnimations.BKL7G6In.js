@@ -1,0 +1,1 @@
+import{r as t}from"./requestAnimationFrameAnimation.BYIHtINy.js";import{g as i}from"./ScrollTrigger.D3P8AdK4.js";const o=()=>{i.gsap.from(".find li",{y:300,opacity:0,duration:1,stagger:{each:.07,from:"edges"},scrollTrigger:{trigger:".find h2",start:"top 85%",end:"top 15%",ease:"power1.inOut",scrub:.5}})};function a(){t(o)}export{a as initAnimations};
