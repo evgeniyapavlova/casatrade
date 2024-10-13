@@ -1,0 +1,1 @@
+import{r as t,g as o}from"./requestAnimationFrameAnimation.Bbp34pEO.js";const n=()=>{o.from(".comfort-items-animated",{x:-200,opacity:0,duration:1,stagger:{each:.1,from:"start"},scrollTrigger:{trigger:".comfort h2",start:"top 80%",end:"top 10%",toggleActions:"play none none none",scrub:.5}})};function i(){t(n)}export{i as initAnimations};

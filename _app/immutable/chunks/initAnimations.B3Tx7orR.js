@@ -1,0 +1,1 @@
+import{r as i,g as t}from"./requestAnimationFrameAnimation.Bbp34pEO.js";const n={trigger:".registration",start:"top 70vh",end:"bottom center",scrub:1,ease:"power1.inOut"},s=()=>{t.utils.toArray(".form-glow-wrap").forEach((r,o)=>{t.to(r,{y:o===0?"+=450":"-=450",scrollTrigger:n})})};function a(){i(s)}export{a as initAnimations};

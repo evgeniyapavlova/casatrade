@@ -1,0 +1,1 @@
+import{r as i,g as t}from"./requestAnimationFrameAnimation.Bbp34pEO.js";const o=()=>{t.from(".find li",{y:300,opacity:0,duration:1,stagger:{each:.07,from:"edges"},scrollTrigger:{trigger:".find h2",start:"top 85%",end:"top 15%",ease:"power1.inOut",scrub:.5}})};function n(){i(o)}export{n as initAnimations};
