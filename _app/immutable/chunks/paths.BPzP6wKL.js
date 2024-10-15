@@ -1,1 +1,1 @@
-var _;const a=((_=globalThis.__sveltekit_1l5jhq2                       )==null?void 0:_.base)??"/casatrade";var s;const e=((s=globalThis.__sveltekit_1l5jhq2                       )==null?void 0:s.assets)??a;export{e as a,a as b};
+var _;const a=((_=globalThis.__sveltekit_82mnh9                        )==null?void 0:_.base)??"/casatrade";var s;const e=((s=globalThis.__sveltekit_82mnh9                        )==null?void 0:s.assets)??a;export{e as a,a as b};
